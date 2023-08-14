@@ -28,6 +28,11 @@ export class FileUploadComponent implements OnInit {
 	onUpload() {
 		this.loading = !this.loading;
 		console.log(this.file);
+    if (!this.file) {
+      alert('Falta elegir un archivo');
+      this.loading = !this.loading;
+      return;
+    }
 		this.fileUploadService.upload(this.file).subscribe(
 			(event: any) => {
 				if (typeof (event) === 'object') {

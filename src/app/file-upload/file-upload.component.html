@@ -1,16 +1,15 @@
 <a href="https://www.geeksforgeeks.org/angular-file-upload/" target="_blank">[Angular File Upload - GeeksforGeeks](https://www.geeksforgeeks.org/angular-file-upload/)</a>
 
 <div class="text-center">
-  <div class="input-group">
-    <input class="form-control" type="file" 
-            (change)="onChange($event)">
+  <form enctype="multipart/form-data">
+    <div class="input-group">
+      <input class="form-control" type="file" accept="image/*"
+              (change)="onChange($event)">
+    
+      <button type="button" (click)="onUpload()" class="btn btn-success"> Upload </button>
   
-    <button (click)="onUpload()" 
-        class="btn btn-success">
-        Upload
-    </button>
-
-  </div>
+    </div>
+  </form>
 </div>
 
 <!-- Shareable short link of  uploaded file -->

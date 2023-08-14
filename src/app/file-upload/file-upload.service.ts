@@ -7,7 +7,7 @@ providedIn: 'root'
 export class FileUploadService {
 	
 // API url
-baseApiUrl = "https://file.io"
+baseApiUrl = "http://localhost:8080/api/dev/fileupload/"
 	
 constructor(private http:HttpClient) { }
 
